@@ -86,6 +86,7 @@ public class BootJpaExampleApplication {
         // deleting the user element
 //        userRepository.deleteById(3);
 //        System.out.println("Deleted!");
+/*
 
         Iterable<User> all = userRepository.findAll();
         all.forEach(System.out::println);
@@ -98,8 +99,10 @@ public class BootJpaExampleApplication {
                 userRepository.deleteById(user.getId());
             }
         });
+*/
 
-
+        List<User> ankit = userRepository.findByName("Rohit");
+        ankit.forEach(System.out::println);
 
 
     }
