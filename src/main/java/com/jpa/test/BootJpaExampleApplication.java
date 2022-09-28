@@ -101,9 +101,19 @@ public class BootJpaExampleApplication {
         });
 */
 
-        List<User> ankit = userRepository.findByName("Rohit");
-        ankit.forEach(System.out::println);
+//        List<User> ankit = userRepository.findByName("Rohit");
+//        ankit.forEach(System.out::println);
 
+        List<User> users3 = userRepository.getAllUser();
+        users3.forEach(System.out::println);
+
+        System.out.println("--------------------------------------------------------");
+
+        List<User> users = userRepository.getUserByName("Ramshek","Kolkata");
+        users.forEach(System.out::println);
+
+        System.out.println("--------------------------------------------------------");
+        userRepository.getUsers().forEach(System.out::println);
 
     }
 
